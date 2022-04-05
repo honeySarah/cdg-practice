@@ -1,0 +1,7 @@
+<%= render "devise/sessions/logout", user: @user %>
+
+<h1>Add mark</h1>
+
+<%= render 'mark_form', lab_report: @lab_report %>
+
+<%= button_to 'Back', lab_reports_path, method: :get %>

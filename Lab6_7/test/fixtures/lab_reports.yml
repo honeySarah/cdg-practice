@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  title: Test lab work 1
+  description: This is test report.
+  grade: A
+
+two:
+  user_id: 1
+  title: Faild to update report
+  description: This test must be faild
+  grade: False_Grade

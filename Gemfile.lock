@@ -2,6 +2,10 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.5.0)
+    rack (2.2.3)
+    rex-core (0.1.27)
+    rex-socket (0.1.34)
+      rex-core
     rspec (3.11.0)
       rspec-core (~> 3.11.0)
       rspec-expectations (~> 3.11.0)
@@ -20,6 +24,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  rack (~> 2.2)
+  rex-socket (~> 0.1.34)
   rspec (~> 3.11)
 
 BUNDLED WITH

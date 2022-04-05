@@ -1,0 +1,33 @@
+<style>
+    .buttons {
+        display: flex;
+    }
+    .button_to {
+        display: inline-block;
+        margin-right: 10px;
+    }
+</style>
+<%= render "devise/sessions/logout", user: @user %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @lab_report.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lab_report.description %>
+</p>
+
+<% unless @lab_report.grade.nil? %>
+<p>
+    <strong>Grade:</strong>
+    <%=  @lab_report.grade  %>
+</p>
+<% end %>
+
+<span class="buttons">
+  <%= button_to 'Ok', lab_reports_path, method: :get %>
+</span>
+
+

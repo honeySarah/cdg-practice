@@ -1,0 +1,44 @@
+<style>
+  .buttons {
+      display: flex;
+  }
+  .button_to {
+      display: inline-block;
+      margin-right: 10px;
+  }
+  .mark {
+      margin-right: 32px;
+  }
+  .logout {
+      text-align: right;
+  }
+</style>
+
+<%= render "devise/sessions/logout", user: @user %>
+<h2>Lab Reports</h2>
+
+<%= button_to 'Add report', new_lab_report_path, method: :get %>
+<% if @lab_reports %>
+  <% @lab_reports.each do |lab_report| %>
+    <div class="report">
+      <h3><%= lab_report.title %></h3>
+      <span style="font-size: small; font-style: italic">
+            User: <%= User.find(lab_report.user_id).first_name %>
+        <%= User.find(lab_report.user_id).last_name %>
+        (<%= User.find(lab_report.user_id).email %>)
+      </span>
+      <div><%= lab_report.description %></div>
+      <br>
+      <span class="buttons">
+        <% if !lab_report.grade %>
+          <%= button_to 'Add mark', edit_lab_report_path(lab_report), method: :get %>
+        <% else %>
+        <span class="mark">  Mark: <%= lab_report.grade %> </span>
+        <% end %>
+        <%= button_to 'Remove', lab_report, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </span>
+    </div>
+    <hr>
+  <% end %>
+<% end %>
+

@@ -1,0 +1,8 @@
+<style>
+    .logout {
+        text-align: right;
+    }
+</style>
+<div class="logout">
+  <%= button_to "logout", destroy_user_session_path, method: :delete %>
+</div>

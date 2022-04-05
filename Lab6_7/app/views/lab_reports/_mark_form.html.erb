@@ -1,0 +1,22 @@
+<%= form_with(model: lab_report) do |form| %>
+  <% if lab_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lab_report.errors.count, "error") %> prohibited this lab_report from being saved:</h2>
+
+      <ul>
+        <% lab_report.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field" id="grade">
+    <%= form.label :grade, 'Mark' %>
+    <%= form.text_field :grade, pattern: "A|B|C|D|E|FX|F", title: 'Must be one of ECTS grades' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Save" %>
+  </div>
+<% end %>
