@@ -1,5 +1,17 @@
 BUFFER = "buff.txt"
 
+def float_arg?(*args)
+  begin
+    args.each do |arg|
+      arg = Float(arg)
+    end
+  rescue ArgumentError
+    true
+  else
+    false
+  end
+end
+
 def index(file_name)
   File.foreach(file_name) { |line| puts line }
 end
