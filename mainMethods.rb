@@ -1,5 +1,17 @@
 BUFFER = "buff.txt"
 
+def int_argument_error?(*args)
+  begin
+    args.each do |arg|
+      arg = Integer(arg)
+    end
+  rescue ArgumentError
+    true
+  else
+    false
+  end
+end
+
 def float_arg?(*args)
   begin
     args.each do |arg|
