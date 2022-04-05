@@ -1,0 +1,14 @@
+current directory: C:/Users/nasty_000/RubymineProjects/SRS_TRPO_test/vendor/bundle/ruby/3.0.0/gems/nio4r-2.5.8/ext/nio4r
+C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/site_ruby/3.0.0 -r ./siteconf20211111-10768-5o6zew.rb extconf.rb
+
+current directory: C:/Users/nasty_000/RubymineProjects/SRS_TRPO_test/vendor/bundle/ruby/3.0.0/gems/nio4r-2.5.8/ext/nio4r
+make DESTDIR\= clean
+make: *** Нет правила для сборки цели «clean».  Останов.
+
+current directory: C:/Users/nasty_000/RubymineProjects/SRS_TRPO_test/vendor/bundle/ruby/3.0.0/gems/nio4r-2.5.8/ext/nio4r
+make DESTDIR\=
+make: Цель «all» не требует выполнения команд.
+
+current directory: C:/Users/nasty_000/RubymineProjects/SRS_TRPO_test/vendor/bundle/ruby/3.0.0/gems/nio4r-2.5.8/ext/nio4r
+make DESTDIR\= install
+make: Цель «install» не требует выполнения команд.
